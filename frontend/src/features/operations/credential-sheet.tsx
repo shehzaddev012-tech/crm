@@ -143,7 +143,7 @@ export function CredentialSheet({
       }
     >
       <form id="credential-form" onSubmit={submit} className="space-y-6">
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="Kind" required>
             <Select
               value={form.kind}

@@ -192,7 +192,7 @@ export function MoveStageDialog({
           </div>
 
           {fields.length > 0 && (
-            <div className="grid grid-cols-2 gap-3 border-t border-line pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 border-t border-line pt-4">
               {fields.map((f) => (
                 <StageFieldInput
                   key={f}

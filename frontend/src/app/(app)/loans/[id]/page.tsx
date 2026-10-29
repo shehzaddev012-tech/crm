@@ -750,7 +750,7 @@ function RefinanceTab({ loan }: { loan: Loan }) {
       <Card>
         <CardHeader title="Market terms" description="Prefilled from debt settings. Changes here are for this analysis only." />
         <CardBody>
-          <div className="grid grid-cols-3 gap-3 md:grid-cols-5 xl:grid-cols-9">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:grid-cols-5 xl:grid-cols-9">
             {TERM_FIELDS.map((f) => (
               <Field key={f.key} label={f.label}>
                 <Input value={form?.[f.key] ?? ""} onChange={(e) => setForm((s) => ({ ...(s ?? {}), [f.key]: e.target.value }))} inputMode="decimal" />

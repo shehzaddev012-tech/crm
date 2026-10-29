@@ -107,7 +107,7 @@ export function ReactivationRuleBuilder({
         />
       </Field>
       {spec && (
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {spec.params.map((p) => {
             const required = spec.required.includes(p.key);
             const v = params[p.key];

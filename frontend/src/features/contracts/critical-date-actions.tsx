@@ -230,7 +230,7 @@ export function DateActionDialog({ date, kind, onClose }: { date: CriticalDate |
           </>
         )}
         {kind === "edit" && (
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Field label="Accountable owner" className="col-span-2">
               <UserPicker value={owner} onChange={setOwner} />
             </Field>
@@ -379,7 +379,7 @@ export function AddDateDialog({
         </>
       }
     >
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Field label="Label" required className="col-span-2">
           <Input value={label} onChange={(e) => setLabel(e.target.value)} placeholder="e.g. Seller to deliver rent roll" />
         </Field>

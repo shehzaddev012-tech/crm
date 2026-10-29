@@ -27,7 +27,7 @@ const opt = (values: readonly string[]) => values.map((v) => ({ value: v, label:
 
 function SourceFields({ value, onChange }: { value: { source: string; observed_on: string }; onChange: (v: { source: string; observed_on: string }) => void }) {
   return (
-    <div className="col-span-2 grid grid-cols-2 gap-3 rounded-lg border border-line bg-subtle/60 p-3">
+    <div className="col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-3 rounded-lg border border-line bg-subtle/60 p-3">
       <p className="col-span-2 text-xs text-ink-3">Area, occupancy and tenant changes keep this source and date in their history.</p>
       <Field label="Source">
         <Input value={value.source} onChange={(e) => onChange({ ...value, source: e.target.value })} />
@@ -317,7 +317,7 @@ export function SpaceFormSheet({
         </>
       }
     >
-      <form id="space-form" onSubmit={submit} className="grid grid-cols-2 gap-3">
+      <form id="space-form" onSubmit={submit} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Field label="Suite / identifier" required>
           <Input {...bind("suite")} required placeholder="e.g. 100, A-2" />
         </Field>

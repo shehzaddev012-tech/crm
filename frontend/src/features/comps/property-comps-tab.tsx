@@ -288,7 +288,7 @@ export function PropertyCompsTab({ propertyId }: { propertyId: string }) {
           </>
         }
       >
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="Document id" required className="col-span-2" hint="From Documents">
             <Input value={doc.document_id} onChange={(e) => setDoc((d) => ({ ...d, document_id: e.target.value }))} placeholder="UUID" />
           </Field>

@@ -24,11 +24,11 @@ export function Dialog({ open, onOpenChange, title, description, children, foote
         <D.Overlay className="fixed inset-0 z-50 bg-ink/25 animate-fade-in" />
         <D.Content
           className={cn(
-            "fixed left-1/2 top-[12vh] z-50 w-[calc(100vw-32px)] max-w-lg -translate-x-1/2 rounded-xl border border-line bg-surface shadow-pop animate-pop-in focus:outline-none",
+            "fixed left-1/2 top-[5vh] z-50 w-[calc(100vw-24px)] max-w-lg sm:top-[12vh] sm:w-[calc(100vw-32px)] -translate-x-1/2 rounded-xl border border-line bg-surface shadow-pop animate-pop-in focus:outline-none",
             className,
           )}
         >
-          <div className="flex items-start justify-between gap-4 px-5 pb-3 pt-4">
+          <div className="flex items-start justify-between gap-4 px-4 pb-3 pt-4 sm:px-5">
             <div>
               <D.Title className="text-base font-semibold text-ink">{title}</D.Title>
               {description ? (
@@ -43,8 +43,8 @@ export function Dialog({ open, onOpenChange, title, description, children, foote
               </Button>
             </D.Close>
           </div>
-          {children && <div className="max-h-[65vh] overflow-y-auto px-5 pb-4 scrollbar-thin">{children}</div>}
-          {footer && <div className="flex justify-end gap-2 border-t border-line bg-subtle/60 px-5 py-3 rounded-b-xl">{footer}</div>}
+          {children && <div className="max-h-[70dvh] overflow-y-auto overflow-x-auto px-4 pb-4 sm:max-h-[65vh] sm:px-5 scrollbar-thin">{children}</div>}
+          {footer && <div className="flex flex-wrap justify-end gap-2 rounded-b-xl border-t border-line bg-subtle/60 px-4 py-3 sm:px-5">{footer}</div>}
         </D.Content>
       </D.Portal>
     </D.Root>
@@ -77,7 +77,7 @@ export function Sheet({ open, onOpenChange, title, description, children, footer
               </Button>
             </D.Close>
           </div>
-          <div className="flex-1 overflow-y-auto px-5 py-4 scrollbar-thin">{children}</div>
+          <div className="flex-1 overflow-y-auto overflow-x-auto px-4 py-4 sm:px-5 scrollbar-thin">{children}</div>
           {footer && <div className="flex justify-end gap-2 border-t border-line bg-subtle/60 px-5 py-3">{footer}</div>}
         </D.Content>
       </D.Portal>

@@ -128,7 +128,7 @@ export function BulkAssociateDialog({
             <PropertyPicker value={propertyId} onChange={(id) => setPropertyId(id)} />
           </Field>
         ) : (
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Field label="Street address" required className="col-span-2">
               <Input value={np.address_line} onChange={(e) => setNp((s) => ({ ...s, address_line: e.target.value }))} />
             </Field>

@@ -211,7 +211,7 @@ export function RecordPaymentSheet({ open, onOpenChange, leaseId }: { open: bool
       }
     >
       <div className="space-y-5">
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {!leaseId && (
             <Field label="Tenant lease" required className="col-span-2">
               <LeasePicker value={lease} onChange={setLease} />
@@ -435,7 +435,7 @@ export function PlanSheet({ open, onOpenChange, leaseId }: { open: boolean; onOp
         </>
       }
     >
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {!leaseId && (
           <Field label="Tenant lease" required className="col-span-2">
             <LeasePicker value={lease} onChange={setLease} />

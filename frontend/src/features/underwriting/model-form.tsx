@@ -88,7 +88,7 @@ export function UwModelCreateSheet({
         <Field label="Name" required>
           <Input value={s.name} onChange={(e) => setS((x) => ({ ...x, name: e.target.value }))} />
         </Field>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="Template" required>
             <Select value={s.template} onChange={(e) => setS((x) => ({ ...x, template: e.target.value }))} options={TEMPLATES.map((t) => ({ value: t, label: TEMPLATE_LABELS[t] }))} />
           </Field>

@@ -36,7 +36,7 @@ function toForm(r?: ComplianceRecord | null): ScrubForm {
 function ScrubFields({ form, set, isNew }: { form: ScrubForm; set: (k: keyof ScrubForm, v: string) => void; isNew: boolean }) {
   const phone = form.channel !== "email";
   return (
-    <div className="grid grid-cols-2 gap-3">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
       {isNew && (
         <>
           <Field label="Channel">

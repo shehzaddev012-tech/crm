@@ -183,7 +183,7 @@ export function InteractionComposer({
       </div>
 
       {showLinks && (
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="Person">
             <PersonPicker value={links.person_id} onChange={(id) => setLinks((l) => ({ ...l, person_id: id ?? undefined }))} />
           </Field>
@@ -199,7 +199,7 @@ export function InteractionComposer({
         </div>
       )}
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Field label="Direction">
           <Select value={direction} onChange={(e) => setDirection(e.target.value)} options={DIRECTIONS.map((d) => ({ value: d, label: d[0].toUpperCase() + d.slice(1) }))} />
         </Field>

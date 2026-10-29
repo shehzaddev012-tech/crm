@@ -116,7 +116,7 @@ export function AffiliationsCard({ mode, ownerId, items }: { mode: EntityKind; o
           </>
         }
       >
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label={mode === "person" ? "Organization" : "Person"} className="col-span-2">
             {mode === "person" ? (
               <OrganizationPicker value={form.other || null} onChange={(id) => setForm((f) => ({ ...f, other: id ?? "" }))} />

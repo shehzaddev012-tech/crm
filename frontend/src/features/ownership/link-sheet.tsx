@@ -103,7 +103,7 @@ export function LinkSheet({ open, onOpenChange, from }: { open: boolean; onOpenC
             Record family and advisor relationships only where lawfully obtained. Mark personal-circumstance evidence as sensitive.
           </p>
         )}
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <Field label="Source" className="col-span-2"><Input value={source} onChange={(e) => setSource(e.target.value)} /></Field>
           <Field label="Confidence %"><Input inputMode="numeric" value={confidence} onChange={(e) => setConfidence(e.target.value)} /></Field>
         </div>
@@ -172,7 +172,7 @@ export function ConfirmLinkDialog({ link, onOpenChange }: { link: Link | null; o
           <span className="font-medium">{a ?? "—"}</span> <span className="text-ink-2">{relationPhrase(relationship)}</span>{" "}
           <span className="font-medium">{b ?? "—"}</span>
         </p>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="Relationship">
             <Select value={relationship} onChange={(e) => setRelationship(e.target.value)} options={rels.map((r) => ({ value: r, label: titleCase(r) }))} />
           </Field>

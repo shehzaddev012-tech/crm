@@ -435,7 +435,7 @@ export function VendorFormSheet({
         </Section>
 
         <Section title="Other">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Field label="Tags" hint="Comma separated" className="col-span-2"><Input {...text("tags")} /></Field>
             <Field label="Notes" className="col-span-2"><Textarea {...text("notes")} /></Field>
           </div>

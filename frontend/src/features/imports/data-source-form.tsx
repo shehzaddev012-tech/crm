@@ -93,7 +93,7 @@ export function DataSourceFormSheet({
       }
     >
       <form id="data-source-form" onSubmit={submit} className="space-y-6">
-        <section className="grid grid-cols-2 gap-3">
+        <section className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="Provider" required className="col-span-2">
             <Input {...bind("provider")} required placeholder="e.g. County assessor roll, CoStar, broker list" />
           </Field>
@@ -122,7 +122,7 @@ export function DataSourceFormSheet({
           </label>
         </section>
 
-        <section className="grid grid-cols-2 gap-3">
+        <section className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <h4 className="col-span-2 text-2xs font-semibold uppercase tracking-wider text-ink-3">Commercial & contact</h4>
           <Field label="Cost ($)">
             <Input {...bind("cost")} inputMode="decimal" />

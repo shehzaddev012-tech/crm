@@ -255,7 +255,7 @@ export function RecordSheet({
     >
       <form id="record-sheet-form" onSubmit={submit} className="space-y-4">
         {children}
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {visible.map((f) => (
             <Field key={f.key} label={f.label} required={f.required} hint={f.hint} className={cn(f.full || ["textarea", "multiselect", "documents", "custom"].includes(f.type) ? "col-span-2" : "col-span-2 sm:col-span-1")}>
               <FieldInput spec={f} value={values[f.key]} set={(v) => setValues((s) => ({ ...s, [f.key]: v }))} values={values} />

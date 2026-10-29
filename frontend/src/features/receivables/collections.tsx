@@ -87,7 +87,7 @@ export function LadderSettingsSheet({ open, onOpenChange, settings }: { open: bo
       <div className="space-y-6">
         <section className="space-y-3">
           <h4 className="text-2xs font-semibold uppercase tracking-wider text-ink-3">Late-fee defaults</h4>
-          <div className="grid grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             <Field label="Grace days"><Input inputMode="numeric" value={fees.grace_days} onChange={(e) => setFees((f) => ({ ...f, grace_days: e.target.value }))} /></Field>
             <Field label="Fee %"><Input inputMode="decimal" value={fees.pct} onChange={(e) => setFees((f) => ({ ...f, pct: e.target.value }))} /></Field>
             <Field label="Flat fee $"><Input inputMode="decimal" value={fees.flat} onChange={(e) => setFees((f) => ({ ...f, flat: e.target.value }))} /></Field>

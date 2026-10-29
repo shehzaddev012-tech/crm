@@ -110,7 +110,7 @@ export function InvestmentFormSheet({
         </>
       }
     >
-      <form id="investment-form" onSubmit={submit} className="grid grid-cols-2 gap-3">
+      <form id="investment-form" onSubmit={submit} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Field label="Asset" required className="col-span-2" hint={assets.data && assets.data.length === 0 ? "No owned assets are available yet." : undefined}>
           {investment ? (
             <Input value={investment.asset_label ?? investment.asset_id} disabled />

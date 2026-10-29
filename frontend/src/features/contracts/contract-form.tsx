@@ -133,7 +133,7 @@ export function ContractFormSheet({
       <form id="contract-form" onSubmit={submit} className="space-y-6">
         <section className="space-y-3">
           <h4 className="text-2xs font-semibold uppercase tracking-wider text-ink-3">Agreement</h4>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Field label="Title" hint="Defaults to the property name" className="col-span-2">
               <Input value={v.title ?? ""} onChange={(e) => set("title", e.target.value)} />
             </Field>
@@ -169,7 +169,7 @@ export function ContractFormSheet({
 
         <section className="space-y-3">
           <h4 className="text-2xs font-semibold uppercase tracking-wider text-ink-3">Dates and money</h4>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Field label="Effective date">
               <Input type="date" value={v.effective_on ?? ""} onChange={(e) => set("effective_on", e.target.value || null)} />
             </Field>
@@ -199,7 +199,7 @@ export function ContractFormSheet({
         <section className="space-y-3">
           <h4 className="text-2xs font-semibold uppercase tracking-wider text-ink-3">Key terms (date engine)</h4>
           <p className="text-xs text-ink-3">Day counts from the agreement. Blank core terms use market defaults and are flagged for verification.</p>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {TERM_FIELDS.map((f) => (
               <Field key={f.key} label={f.label} hint={f.hint}>
                 <Input inputMode="numeric" value={terms[f.key] ?? ""} onChange={(e) => setTerms((s) => ({ ...s, [f.key]: e.target.value }))} />
@@ -251,7 +251,7 @@ export function ContractFormSheet({
 
         <section className="space-y-3">
           <h4 className="text-2xs font-semibold uppercase tracking-wider text-ink-3">Counsel and notes</h4>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Field label="Attorney">
               <PersonPicker value={v.attorney_person_id} onChange={(id) => set("attorney_person_id", id)} />
             </Field>
@@ -311,7 +311,7 @@ export function ExecuteDialog({ open, onOpenChange, contract }: { open: boolean;
         </>
       }
     >
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Field label="Effective date" required>
           <Input type="date" value={effective} onChange={(e) => setEffective(e.target.value)} />
         </Field>

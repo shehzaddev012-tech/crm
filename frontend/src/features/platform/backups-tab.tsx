@@ -141,7 +141,7 @@ function BackupSheet({ open, onOpenChange }: { open: boolean; onOpenChange: (o: 
       }
     >
       <div className="space-y-4">
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="Type" required>
             <Select value={kind} onChange={(e) => setKind(e.target.value as "backup" | "restore_test")} options={[{ value: "backup", label: "Backup" }, { value: "restore_test", label: "Restoration test" }]} />
           </Field>
@@ -162,7 +162,7 @@ function BackupSheet({ open, onOpenChange }: { open: boolean; onOpenChange: (o: 
           <label className="flex items-center gap-2 text-sm text-ink"><Checkbox checked={encrypted} onChange={setEncrypted} label="Encrypted" /> Encrypted</label>
           <label className="flex items-center gap-2 text-sm text-ink"><Checkbox checked={pitr} onChange={setPitr} label="Point-in-time recovery" /> Point-in-time recovery</label>
         </div>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="RPO target (min)"><Input value={rpoTarget} onChange={(e) => setRpoTarget(e.target.value)} className="tabular" /></Field>
           <Field label="RTO target (min)"><Input value={rtoTarget} onChange={(e) => setRtoTarget(e.target.value)} className="tabular" /></Field>
           {kind === "restore_test" && (

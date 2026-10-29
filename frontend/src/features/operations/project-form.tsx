@@ -201,7 +201,7 @@ export function ProjectFormSheet({
     >
       <form id="project-form" onSubmit={submit} className="space-y-6">
         <Section title="Project">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {!editing && (
               <Field label="Property" required className="col-span-2">
                 <PropertyPicker value={form.property_id} onChange={(id) => set("property_id", id)} />
@@ -230,7 +230,7 @@ export function ProjectFormSheet({
               : "The original budget is recorded as the first entry in the append-only budget history."
           }
         >
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {editing ? (
               <Field label="Current budget">
                 <Input value={formatCurrency(project?.current_budget)} disabled />
@@ -250,7 +250,7 @@ export function ProjectFormSheet({
         </Section>
 
         <Section title="Schedule">
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Field label="Start">
               <Input type="date" {...bind("start_on")} />
             </Field>
@@ -287,7 +287,7 @@ export function ProjectFormSheet({
 
         {editing && (
           <Section title="Warranty">
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Field label="Warranty expires">
                 <Input type="date" {...bind("warranty_expires_on")} />
               </Field>

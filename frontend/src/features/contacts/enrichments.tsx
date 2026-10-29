@@ -108,7 +108,7 @@ export function EnrichmentsCard({ kind, id }: { kind: EntityKind; id: string }) 
           </>
         }
       >
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="Provider" required className="col-span-2"><Input autoFocus value={form.provider} onChange={set("provider")} /></Field>
           <Field label="Enriched on"><Input type="date" value={form.enriched_at} onChange={set("enriched_at")} /></Field>
           <Field label="Cost ($)"><Input inputMode="decimal" value={form.cost} onChange={set("cost")} /></Field>

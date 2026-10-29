@@ -111,7 +111,7 @@ export function ReactivateDialog({ item, onOpenChange }: { item: ReactivationIte
             {reqs.length === 0 && <li className="text-sm text-ink-3">No entry requirements for this stage.</li>}
           </ul>
           {fields.length > 0 && (
-            <div className="grid grid-cols-2 gap-3 border-t border-line pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 border-t border-line pt-4">
               {fields.map((f) => (
                 <StageFieldInput key={f} field={f} value={values[f]} onChange={(v) => setValues((s) => ({ ...s, [f]: v }))} required />
               ))}

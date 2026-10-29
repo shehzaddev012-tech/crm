@@ -27,7 +27,7 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
   return (
     <section className="space-y-3">
       <h4 className="text-2xs font-semibold uppercase tracking-wider text-ink-3">{title}</h4>
-      <div className="grid grid-cols-2 gap-3">{children}</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">{children}</div>
     </section>
   );
 }
@@ -273,7 +273,7 @@ export function CompFormSheet({
                 I verified this comp
               </label>
               {verify.verified && (
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <Field label="Verification method" required>
                     <Select value={verify.method} onChange={(e) => setVerify((v) => ({ ...v, method: e.target.value }))} placeholder="Select" options={VERIFICATION_METHODS.map((m) => ({ value: m, label: titleCase(m) }))} />
                   </Field>

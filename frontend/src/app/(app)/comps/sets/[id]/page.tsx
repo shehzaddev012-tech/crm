@@ -83,7 +83,7 @@ function EditSetDialog({ set, open, onOpenChange }: { set: CompSet; open: boolea
         <Field label="Name">
           <Input value={s.name} onChange={(e) => setS((x) => ({ ...x, name: e.target.value }))} />
         </Field>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="Value basis" hint="Changing the basis re-reads the subject quantity from the property unless you enter one.">
             <Select value={s.value_basis} onChange={(e) => setS((x) => ({ ...x, value_basis: e.target.value }))} options={bases.map((b) => ({ value: b, label: BASIS_LABELS[b] }))} />
           </Field>
@@ -281,7 +281,7 @@ function CompSetDetail({ id }: { id: string }) {
                 format={(v) => formatMetric(v, set.value_basis)}
               />
             )}
-            <div className="grid grid-cols-3 gap-3 border-t border-line pt-3 text-xs">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 border-t border-line pt-3 text-xs">
               <div>
                 <p className="text-ink-3">{BASIS_LABELS[set.value_basis]} range</p>
                 <p className="font-medium text-ink tabular">{formatMetric(ind.metric_low, set.value_basis)} – {formatMetric(ind.metric_high, set.value_basis)}</p>
@@ -431,7 +431,7 @@ function CompSetDetail({ id }: { id: string }) {
           <Field label="Title" required>
             <Input value={bov.title} onChange={(e) => setBov((b) => ({ ...b, title: e.target.value }))} />
           </Field>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Field label="Prepared for">
               <Input value={bov.prepared_for} onChange={(e) => setBov((b) => ({ ...b, prepared_for: e.target.value }))} placeholder="Owner name" />
             </Field>

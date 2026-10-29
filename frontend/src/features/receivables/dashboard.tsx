@@ -13,7 +13,7 @@ import { BUCKETS, bucketPastDue, useDashboard, type Buckets, type DashboardRow }
 export function AgingCards({ totals, unapplied, compact }: { totals?: Buckets; unapplied?: number; compact?: boolean }) {
   const tone = (key: string, v: number) => (v <= 0 ? "default" : key === "d90_plus" || key === "d61_90" ? "negative" : key === "current" ? "default" : "caution");
   return (
-    <div className={cn("grid grid-cols-2 gap-3", compact ? "lg:grid-cols-6" : "md:grid-cols-3 xl:grid-cols-7")}>
+    <div className={cn("grid grid-cols-1 sm:grid-cols-2 gap-3", compact ? "lg:grid-cols-6" : "md:grid-cols-3 xl:grid-cols-7")}>
       {BUCKETS.map((b) => {
         const v = totals?.[b.key] ?? 0;
         return <StatCard key={b.key} label={b.label} value={totals ? formatCurrency(v, { compact: true }) : "—"} tone={tone(b.key, v)} />;

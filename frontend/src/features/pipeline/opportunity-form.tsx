@@ -195,7 +195,7 @@ export function OpportunityEditSheet({ open, onOpenChange, opportunity }: { open
         {EDIT_GROUPS.map((g) => (
           <section key={g.title} className="space-y-3">
             <h4 className="text-2xs font-semibold uppercase tracking-wider text-ink-3">{g.title}</h4>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {g.fields.map((f) => (
                 <StageFieldInput key={f} field={f} value={current(f)} onChange={(v) => setValues((s) => ({ ...s, [f]: v }))} />
               ))}

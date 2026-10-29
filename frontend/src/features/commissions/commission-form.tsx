@@ -153,7 +153,7 @@ export function CommissionFormSheet({ open, onOpenChange, commission, onSaved }:
         </>
       }
     >
-      <form id="commission-form" onSubmit={submit} className="grid grid-cols-2 gap-3">
+      <form id="commission-form" onSubmit={submit} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {!commission && (
           <Field label="Brokerage transaction" className="col-span-2" hint={deals.data && !deals.data.length ? "No brokerage transactions available; the record can still be created manually." : "Defaults agent, estimate, probability and close date from the transaction."}>
             <Select

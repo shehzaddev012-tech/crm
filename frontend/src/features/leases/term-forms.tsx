@@ -74,7 +74,7 @@ function CitationFields({ bind }: { bind: (k: string) => { value: string; onChan
         <h4 className="text-sm font-medium">Source citation</h4>
         <p className="text-xs text-ink-3">Where this term appears in the lease document.</p>
       </div>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         <Field label="Document ID" className="col-span-3"><Input {...bind("document_id")} /></Field>
         <Field label="Page"><Input inputMode="numeric" {...bind("page")} /></Field>
         <Field label="Clause / section" className="col-span-2"><Input {...bind("clause_ref")} placeholder="e.g. 4.2(b)" /></Field>
@@ -85,7 +85,7 @@ function CitationFields({ bind }: { bind: (k: string) => { value: string; onChan
 }
 
 function Grid({ children }: { children: ReactNode }) {
-  return <div className="grid grid-cols-2 gap-3">{children}</div>;
+  return <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">{children}</div>;
 }
 
 function AiFlag({ checked, onChange }: { checked: boolean; onChange: (v: boolean) => void }) {
@@ -676,7 +676,7 @@ export function FieldCitationDialog({ open, onOpenChange, lease, field }: { open
         </>
       }
     >
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         <Field label="Document ID" className="col-span-3"><Input {...bind("document_id")} /></Field>
         <Field label="Page"><Input inputMode="numeric" {...bind("page")} /></Field>
         <Field label="Clause / section" className="col-span-2"><Input {...bind("clause_ref")} /></Field>

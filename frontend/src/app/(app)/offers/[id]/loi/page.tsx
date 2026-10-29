@@ -80,7 +80,7 @@ function LoiView({ id }: { id: string }) {
           ))}
         </dl>
 
-        <div className="mt-12 grid grid-cols-2 gap-10">
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-10">
           {["Buyer", "Seller"].map((who) => (
             <div key={who}>
               <p className="mb-10 text-xs uppercase tracking-wider text-ink-3">{who}</p>

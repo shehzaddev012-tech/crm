@@ -357,7 +357,7 @@ export function Toolbar({ children, right }: { children: ReactNode; right?: Reac
   return (
     <div className="flex flex-wrap items-center justify-between gap-2">
       <div className="flex flex-wrap items-center gap-2">{children}</div>
-      {right && <div className="flex items-center gap-2">{right}</div>}
+      {right && <div className="flex flex-wrap items-center gap-2">{right}</div>}
     </div>
   );
 }

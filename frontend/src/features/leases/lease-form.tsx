@@ -38,7 +38,7 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
   return (
     <section className="space-y-3">
       <h4 className="text-2xs font-semibold uppercase tracking-wider text-ink-3">{title}</h4>
-      <div className="grid grid-cols-2 gap-3">{children}</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">{children}</div>
     </section>
   );
 }
@@ -206,7 +206,7 @@ export function LeaseFormSheet({
             <h4 className="text-sm font-medium">Source of these terms</h4>
             <p className="text-xs text-ink-3">Changed material terms keep this source, date and confidence. AI-extracted values stay unverified until a person verifies them.</p>
           </div>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <Field label="Source" className="col-span-3">
               <Input value={source.source} onChange={(e) => setSource((s) => ({ ...s, source: e.target.value }))} />
             </Field>

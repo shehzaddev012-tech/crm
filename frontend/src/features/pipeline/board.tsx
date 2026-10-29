@@ -139,7 +139,7 @@ export function PipelineBoard({ params }: { params: Params }) {
       </div>
 
       {canMove && (
-        <div className={cn("grid grid-cols-3 gap-3 transition-opacity", dragging ? "opacity-100" : "opacity-60")}>
+        <div className={cn("grid grid-cols-1 sm:grid-cols-3 gap-3 transition-opacity", dragging ? "opacity-100" : "opacity-60")}>
           {DROP_ZONES.map((s) => (
             <div
               key={s}

@@ -54,6 +54,14 @@
 }
 
 @layer utilities {
+  /* Single-column grids on phones: items written for a 2-3 column layout (col-span-2/3) must span the one column,
+     otherwise the grid grows an implicit extra column and overflows. */
+  @media (max-width: 639.98px) {
+    .grid.grid-cols-1 > [class*="col-span-"]:not([class*=":col-span-"]) {
+      grid-column: 1 / -1;
+    }
+  }
+
   .tabular {
     font-variant-numeric: tabular-nums;
   }

@@ -100,7 +100,7 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
   return (
     <section className="space-y-3">
       <h4 className="text-2xs font-semibold uppercase tracking-wider text-ink-3">{title}</h4>
-      <div className="grid grid-cols-2 gap-3">{children}</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">{children}</div>
     </section>
   );
 }

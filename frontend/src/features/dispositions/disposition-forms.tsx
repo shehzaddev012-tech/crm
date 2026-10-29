@@ -83,7 +83,7 @@ function Section({ title, children, description }: { title: string; children: Re
         <h4 className="text-2xs font-semibold uppercase tracking-wider text-ink-3">{title}</h4>
         {description && <p className="mt-0.5 text-xs text-ink-3">{description}</p>}
       </div>
-      <div className="grid grid-cols-2 gap-3">{children}</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">{children}</div>
     </section>
   );
 }
@@ -874,7 +874,7 @@ export function RetradeDecisionDialog({
         </>
       }
     >
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Field label="Decision"><Select {...bind("decision")} options={opts(RETRADE_DECISIONS)} /></Field>
         <Field label="Agreed reduction ($)"><Input {...bind("agreed_amount")} inputMode="decimal" placeholder={retrade ? String(retrade.amount_requested) : undefined} /></Field>
         <Field label="Outcome" className="col-span-2"><Select {...bind("outcome")} options={opts(RETRADE_OUTCOMES)} /></Field>

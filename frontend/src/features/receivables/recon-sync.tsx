@@ -221,7 +221,7 @@ export function SyncTab() {
           </>
         }
       >
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="Target system" className="col-span-2"><Input value={exp.system} onChange={(e) => setExp((x) => ({ ...x, system: e.target.value }))} placeholder="e.g. General ledger" /></Field>
           <Field label="From"><Input type="date" value={exp.period_from} onChange={(e) => setExp((x) => ({ ...x, period_from: e.target.value }))} /></Field>
           <Field label="To"><Input type="date" value={exp.period_to} onChange={(e) => setExp((x) => ({ ...x, period_to: e.target.value }))} /></Field>
@@ -241,7 +241,7 @@ export function SyncTab() {
           </>
         }
       >
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="Source system"><Input value={imp.system} onChange={(e) => setImp((x) => ({ ...x, system: e.target.value }))} /></Field>
           <Field label="External batch ID"><Input value={imp.external_batch_id} onChange={(e) => setImp((x) => ({ ...x, external_batch_id: e.target.value }))} /></Field>
           <Field label="Entries (JSON)" className="col-span-2"><Textarea rows={10} className="font-mono text-xs" value={imp.entries} onChange={(e) => setImp((x) => ({ ...x, entries: e.target.value }))} /></Field>

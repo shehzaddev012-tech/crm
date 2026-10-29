@@ -84,7 +84,7 @@ function RiskSheet({ open, onOpenChange, contractId, risk }: { open: boolean; on
         </>
       }
     >
-      <form id="risk-form" onSubmit={submit} className="grid grid-cols-2 gap-3">
+      <form id="risk-form" onSubmit={submit} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Field label="Risk" required className="col-span-2">
           <Input value={str("title")} onChange={(e) => set("title", e.target.value)} />
         </Field>
@@ -183,7 +183,7 @@ function DecisionDialog({ open, onOpenChange, contract }: { open: boolean; onOpe
         </>
       }
     >
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Field label="Decision" className="col-span-2">
           <Select value={kind} onChange={(e) => setKind(e.target.value)} options={DECISION_KINDS.map((k) => ({ value: k, label: DECISION_KIND_LABELS[k] }))} />
         </Field>

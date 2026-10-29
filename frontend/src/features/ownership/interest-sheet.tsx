@@ -20,7 +20,7 @@ function Section({ title, children }: { title: string; children: ReactNode }) {
   return (
     <section className="space-y-3">
       <h4 className="text-2xs font-semibold uppercase tracking-wider text-ink-3">{title}</h4>
-      <div className="grid grid-cols-2 gap-3">{children}</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">{children}</div>
     </section>
   );
 }
@@ -197,7 +197,7 @@ export function EndInterestDialog({ interest, onOpenChange }: { interest: Intere
         </>
       }
     >
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Field label="End date" required><Input type="date" value={form.effective_to} onChange={(e) => setForm((f) => ({ ...f, effective_to: e.target.value }))} /></Field>
         <Field label="Disposition price ($)"><Input inputMode="decimal" value={form.disposed_price} onChange={(e) => setForm((f) => ({ ...f, disposed_price: e.target.value }))} /></Field>
         <Field label="Reason" className="col-span-2"><Input value={form.reason} onChange={(e) => setForm((f) => ({ ...f, reason: e.target.value }))} placeholder="e.g. Sold to new owner, deed recorded" /></Field>

@@ -508,7 +508,7 @@ function MapWorkspace() {
 
         <PanelSection title="Legend">
           <p className="mb-1.5 text-xs text-ink-2">Property status</p>
-          <div className="grid grid-cols-2 gap-x-3 gap-y-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-3 gap-y-1">
             {PROPERTY_STATUSES.map((s) => (
               <span key={s} className="flex items-center gap-1.5 text-xs text-ink-2">
                 <span className="size-2.5 rounded-full" style={{ background: cssStatusColor(s) }} />

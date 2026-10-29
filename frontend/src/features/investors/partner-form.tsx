@@ -117,7 +117,7 @@ export function PartnerFormSheet({ open, onOpenChange, partner }: { open: boolea
         </>
       }
     >
-      <form id="partner-form" onSubmit={submit} className="grid grid-cols-2 gap-3">
+      <form id="partner-form" onSubmit={submit} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Field label="Name" required className="col-span-2">
           <Input value={form.name} onChange={(e) => set("name", e.target.value)} required placeholder="e.g. Harbor Family Office LP" />
         </Field>

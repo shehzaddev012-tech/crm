@@ -23,7 +23,7 @@ export function PageHeader({
   return (
     <div className="mb-5">
       {breadcrumbs && breadcrumbs.length > 0 && (
-        <nav className="mb-2 flex items-center gap-1 text-xs text-ink-3">
+        <nav className="mb-2 flex flex-wrap items-center gap-1 text-xs text-ink-3">
           {breadcrumbs.map((b, i) => (
             <span key={i} className="flex items-center gap-1">
               {i > 0 && <ChevronRight className="size-3" />}
@@ -38,13 +38,13 @@ export function PageHeader({
           ))}
         </nav>
       )}
-      <div className="flex flex-wrap items-start justify-between gap-4">
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between sm:gap-4">
         <div className="min-w-0">
           <h1 className="truncate text-xl font-semibold tracking-tight text-ink">{title}</h1>
           {description && <p className="mt-1 text-sm text-ink-2">{description}</p>}
           {meta && <div className="mt-2 flex flex-wrap items-center gap-2">{meta}</div>}
         </div>
-        {actions && <div className="flex shrink-0 items-center gap-2">{actions}</div>}
+        {actions && <div className="flex flex-wrap items-center gap-2 sm:shrink-0 sm:justify-end">{actions}</div>}
       </div>
     </div>
   );
@@ -89,7 +89,7 @@ export function ListCard({ toolbar, children, footer }: { toolbar?: ReactNode; c
 export function BulkBar({ count, onClear, children }: { count: number; onClear: () => void; children: ReactNode }) {
   if (count === 0) return null;
   return (
-    <div className="fixed bottom-6 left-1/2 z-40 flex -translate-x-1/2 items-center gap-1 rounded-xl border border-ink/10 bg-ink px-2 py-1.5 text-sm text-white shadow-pop animate-slide-up">
+    <div className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] left-1/2 z-40 flex max-w-[calc(100vw-1.5rem)] -translate-x-1/2 flex-wrap items-center justify-center gap-1 rounded-xl border border-ink/10 bg-ink px-2 py-1.5 text-sm text-white shadow-pop animate-slide-up">
       <span className="px-2 font-medium tabular">{formatNumber(count)} selected</span>
       <span className="mx-1 h-4 w-px bg-white/20" />
       {children}

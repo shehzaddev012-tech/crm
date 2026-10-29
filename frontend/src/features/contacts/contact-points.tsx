@@ -162,7 +162,7 @@ export function ContactPointsCard({
           </>
         }
       >
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="Type">
             <Select value={form.kind} onChange={(e) => setForm((f) => ({ ...f, kind: e.target.value }))} options={[{ value: "phone", label: "Phone" }, { value: "email", label: "Email" }]} />
           </Field>

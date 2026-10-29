@@ -88,7 +88,7 @@ export function BuyBoxFormSheet({ open, onOpenChange, buyBox }: { open: boolean;
         </>
       }
     >
-      <form id="buybox-form" onSubmit={submit} className="grid grid-cols-2 gap-3">
+      <form id="buybox-form" onSubmit={submit} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Field label="Name" required className="col-span-2">
           <Input value={form.name} onChange={(e) => set("name", e.target.value)} required placeholder="e.g. Texas STNL under $5M" />
         </Field>

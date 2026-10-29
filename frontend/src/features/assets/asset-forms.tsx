@@ -483,7 +483,7 @@ export function FinancialEntrySheet({ open, onOpenChange, assetId }: { open: boo
       <Tabs value={mode} onValueChange={setMode}>
         <TabList tabs={[{ value: "single", label: "Single entry" }, { value: "bulk", label: "Bulk paste" }]} className="mb-4" />
         <TabPanel value="single">
-          <form id="fin-single" onSubmit={submitSingle} className="grid grid-cols-2 gap-3">
+          <form id="fin-single" onSubmit={submitSingle} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Field label="Period" required>
               <Input type="month" value={single.period} onChange={(e) => setSingle((s) => ({ ...s, period: e.target.value }))} required />
             </Field>

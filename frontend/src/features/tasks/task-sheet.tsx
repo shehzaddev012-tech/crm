@@ -221,7 +221,7 @@ export function TaskSheet({
             <Field label="Title" required>
               <Input autoFocus value={form.title} onChange={(e) => set("title", e.target.value)} maxLength={300} />
             </Field>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Field label="Type">
                 <Select value={form.task_type} onChange={(e) => set("task_type", e.target.value)} options={TASK_TYPES.map((t) => ({ value: t, label: TASK_TYPE_LABELS[t] }))} />
               </Field>

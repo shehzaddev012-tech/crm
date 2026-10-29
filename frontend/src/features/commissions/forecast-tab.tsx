@@ -105,7 +105,7 @@ export function ForecastTab() {
         />
         <CardBody>
           <ForecastChart data={data.months} />
-          <div className="mt-3 grid grid-cols-4 gap-x-6 gap-y-1 text-xs sm:grid-cols-6 lg:grid-cols-12">
+          <div className="mt-3 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-1 text-xs sm:grid-cols-6 lg:grid-cols-12">
             {data.months.map((b) => (
               <div key={b.month} className="text-center">
                 <p className="text-ink-3">{monthLabel(b.month)}</p>

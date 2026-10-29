@@ -2735,7 +2735,7 @@ function PaymentDialog({ payment, onClose }: { payment: TaxPayment | null; onClo
       {shown && (
         <div className="space-y-4">
           {canConfirm ? (
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Field label="Amount paid ($)" required>
                 <Input {...bind("amount_paid")} inputMode="decimal" />
               </Field>

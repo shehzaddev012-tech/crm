@@ -99,7 +99,7 @@ function SettingsDialog({ open, onOpenChange }: { open: boolean; onOpenChange: (
         </>
       }
     >
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Field label="Price threshold ($)" className="col-span-2" hint="Offers above this price need approval. Leave blank for none.">
           <Input {...bind("price_threshold")} inputMode="decimal" />
         </Field>

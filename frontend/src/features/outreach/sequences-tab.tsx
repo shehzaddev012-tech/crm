@@ -101,7 +101,7 @@ function SequenceSheet({ open, onOpenChange, sequence }: { open: boolean; onOpen
         <Field label="Description">
           <Textarea value={form.description ?? ""} onChange={(e) => setForm((f) => ({ ...f, description: e.target.value }))} rows={2} />
         </Field>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="Status">
             <Select value={form.status} onChange={(e) => setForm((f) => ({ ...f, status: e.target.value }))} options={["active", "paused", "archived"].map((s) => ({ value: s, label: titleCase(s) }))} />
           </Field>

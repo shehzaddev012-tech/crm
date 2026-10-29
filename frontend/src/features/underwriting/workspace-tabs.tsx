@@ -554,7 +554,7 @@ export function SimulationTab({ model }: { model: UwModel }) {
             )}
             {m && m.count > 0 ? (
               <>
-                <div className="grid grid-cols-4 gap-3 md:grid-cols-8">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 md:grid-cols-8">
                   {(["p5", "p10", "p25", "p50", "p75", "p90", "p95", "mean"] as const).map((k) => (
                     <div key={k}>
                       <p className="text-xs text-ink-3">{k === "mean" ? "Mean" : `P${k.slice(1)}`}</p>

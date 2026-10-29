@@ -72,7 +72,7 @@ function Section({ title, description, children }: { title: string; description?
         <h4 className="text-2xs font-semibold uppercase tracking-wider text-ink-3">{title}</h4>
         {description && <p className="mt-0.5 text-xs text-ink-3">{description}</p>}
       </div>
-      <div className="grid grid-cols-2 gap-3">{children}</div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">{children}</div>
     </section>
   );
 }
@@ -210,7 +210,7 @@ export function LoanFormSheet({
               <h4 className="text-sm font-medium">Change context</h4>
               <p className="text-xs text-ink-3">Material changes (balance, rate, maturity, status, terms) are written to the loan history with this date and note.</p>
             </div>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <Field label="Effective date">
                 <Input type="date" {...bind("effective_on")} />
               </Field>
@@ -389,7 +389,7 @@ export function CollateralDialog({ open, onOpenChange, loanId }: { open: boolean
         </>
       }
     >
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Field label="Property" required className="col-span-2">
           <PropertyPicker value={propertyId} onChange={(id) => setPropertyId(id)} />
         </Field>
@@ -874,7 +874,7 @@ export function SubmitObligationDialog({ open, onOpenChange, loanId, obligation 
         </>
       }
     >
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Field label="Submitted on"><Input type="date" {...bind("submitted_on")} /></Field>
         <Field label="Document id" hint="Optional"><Input {...bind("document_id")} /></Field>
         <Field label="Note" className="col-span-2"><Textarea rows={2} {...bind("note")} /></Field>

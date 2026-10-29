@@ -103,7 +103,7 @@ function DDItemSheet({ open, onOpenChange, contractId, item, items }: { open: bo
         </>
       }
     >
-      <form id="dd-item-form" onSubmit={submit} className="grid grid-cols-2 gap-3">
+      <form id="dd-item-form" onSubmit={submit} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Field label="Title" required className="col-span-2">
           <Input value={(v.title as string) ?? ""} onChange={(e) => set("title", e.target.value)} />
         </Field>

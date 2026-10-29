@@ -121,7 +121,7 @@ function ReportSheet({ open, onOpenChange, contractId, report }: { open: boolean
         </>
       }
     >
-      <form id="report-form" onSubmit={submit} className="grid grid-cols-2 gap-3">
+      <form id="report-form" onSubmit={submit} className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <Field label="Report type">
           <Select value={str("report_type")} onChange={(e) => set("report_type", e.target.value)} options={REPORT_TYPES.map((t) => ({ value: t, label: REPORT_TYPE_LABELS[t] }))} />
         </Field>

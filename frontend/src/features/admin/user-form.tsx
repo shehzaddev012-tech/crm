@@ -142,7 +142,7 @@ export function UserFormSheet({
           </div>
         )}
 
-        <section className="grid grid-cols-2 gap-3">
+        <section className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label={form.is_service ? "Integration name" : "Full name"} required className="col-span-2">
             <Input {...bind("full_name")} required />
           </Field>
@@ -159,7 +159,7 @@ export function UserFormSheet({
           )}
         </section>
 
-        <section className="grid grid-cols-2 gap-3">
+        <section className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <h4 className="col-span-2 text-2xs font-semibold uppercase tracking-wider text-ink-3">Access</h4>
           <Field label="Role" required>
             <Select {...bind("role_id")} required placeholder="Select role" options={roles.map((r) => ({ value: r.id, label: r.name }))} />
@@ -175,7 +175,7 @@ export function UserFormSheet({
         </section>
 
         {!form.is_service && (
-          <section className="grid grid-cols-2 gap-3">
+          <section className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <h4 className="col-span-2 text-2xs font-semibold uppercase tracking-wider text-ink-3">{editing ? "Reset password" : "Password"}</h4>
             <Field
               label={editing ? "New password" : "Initial password"}

@@ -169,7 +169,7 @@ export function ValuationFormSheet({
       }
     >
       <div className="space-y-5">
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="Property" required className="col-span-2">
             <PropertyPicker value={property} onChange={(id) => setProperty(id)} />
           </Field>
@@ -242,7 +242,7 @@ export function ValuationFormSheet({
         )}
 
         {manualMethod && (
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <Field label="Value low">
               <Input inputMode="decimal" value={manual.low} onChange={(e) => setManual((m) => ({ ...m, low: e.target.value }))} />
             </Field>

@@ -90,7 +90,7 @@ function SubscriptionSheet({ open, onOpenChange, sub }: { open: boolean; onOpenC
         <Field label="Name" required>
           <Input autoFocus value={form.name} onChange={(e) => set("name", e.target.value)} placeholder="e.g. DFW retail — high severity" />
         </Field>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Field label="Delivery">
             <Select value={form.channel} onChange={(e) => set("channel", e.target.value as SubscriptionInput["channel"])} options={Object.entries(CHANNEL_LABELS).map(([value, label]) => ({ value, label }))} />
           </Field>

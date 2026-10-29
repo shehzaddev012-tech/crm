@@ -25,7 +25,7 @@ export function TableFooter({
   const to = Math.min(total, page * pageSize);
 
   return (
-    <div className="flex items-center justify-between gap-3 px-3 py-2 text-xs text-ink-3">
+    <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-2 px-3 py-2 text-xs text-ink-3">
       <span className="tabular">
         {total === 0 ? "No results" : (
           <>

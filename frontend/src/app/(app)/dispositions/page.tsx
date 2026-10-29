@@ -290,7 +290,7 @@ function DispositionsView() {
       <Tabs value={view} onValueChange={(v) => url.set({ view: v === "pipeline" ? null : v }, { resetPage: false })}>
         <TabList className="mb-4" tabs={[{ value: "pipeline", label: "Pipeline", count: list.data?.total }, { value: "buyers", label: "Buyers" }]} />
         <TabPanel value="pipeline">
-          <div className="mb-4 grid grid-cols-3 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-5 lg:grid-cols-9">
+          <div className="mb-4 grid grid-cols-2 sm:grid-cols-3 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-5 lg:grid-cols-9">
             {STAGES.map((s) => {
               const active = stages.length === 1 && stages[0] === s;
               return (

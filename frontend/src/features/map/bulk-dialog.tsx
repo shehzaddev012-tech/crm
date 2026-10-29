@@ -201,7 +201,7 @@ export function BulkActionDialog({
 
         {!ready && <p className="text-sm text-ink-3">Choose the options above to see a preview.</p>}
         {ready && preview.isLoading && !result && (
-          <div className="grid grid-cols-3 gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             <Skeleton className="h-14" />
             <Skeleton className="h-14" />
             <Skeleton className="h-14" />

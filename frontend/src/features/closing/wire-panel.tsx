@@ -109,7 +109,7 @@ function CallbackDialog({ closing, wire, open, onOpenChange }: { closing: Closin
         </>
       }
     >
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div className="col-span-2 rounded-md border border-line bg-subtle/60 p-2.5 text-xs text-ink-2">
           Instructions arrived via <span className="font-medium text-ink">{wire.instruction_source}</span>
           {wire.instruction_contact_phone ? <> with phone <span className="font-mono">{wire.instruction_contact_phone}</span></> : null}.

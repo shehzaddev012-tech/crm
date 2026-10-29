@@ -255,7 +255,7 @@ function IntegrationSheet({
         )}
 
         {integration ? (
-          <div className="grid grid-cols-2 gap-3 rounded-md border border-line bg-subtle/60 p-3 text-xs">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 rounded-md border border-line bg-subtle/60 p-3 text-xs">
             <div>
               <p className="text-ink-3">Provider</p>
               <p className="font-medium text-ink">{integration.provider}</p>

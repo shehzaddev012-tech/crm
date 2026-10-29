@@ -320,7 +320,7 @@ export function CommissionSheet({ id, onClose }: { id: string | null; onClose: (
           </>
         }
       >
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {dialog === "earn" && (
             <Field label="Earned on (closing date)">
               <Input type="date" value={v("date")} onChange={(e) => setV("date", e.target.value)} />

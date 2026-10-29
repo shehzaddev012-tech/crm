@@ -720,7 +720,7 @@ function BidsTab({ p }: { p: Project }) {
         }
       >
         {awarding && (
-          <dl className="grid grid-cols-2 gap-3 rounded-lg border border-line bg-subtle/60 p-3 text-sm">
+          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 rounded-lg border border-line bg-subtle/60 p-3 text-sm">
             <div>
               <dt className="text-xs text-ink-3">Bid amount</dt>
               <dd className="font-medium tabular">{formatCurrency(awarding.amount)}</dd>
@@ -1866,7 +1866,7 @@ function ProjectDetail({ id }: { id: string }) {
         onConfirm={confirmAction}
       >
         {(dlg === "approve" || dlg === "submit") && (
-          <dl className="grid grid-cols-2 gap-3 rounded-lg border border-line bg-subtle/60 p-3 text-sm">
+          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-3 rounded-lg border border-line bg-subtle/60 p-3 text-sm">
             <div>
               <dt className="text-xs text-ink-3">Budget</dt>
               <dd className="font-medium tabular">{formatCurrency(p.current_budget)}</dd>
@@ -1884,7 +1884,7 @@ function ProjectDetail({ id }: { id: string }) {
           <Notice>There are pending change orders or unpaid draws. Resolve them before closing.</Notice>
         )}
         {dlg === "complete" && (
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <Field label="Actual completion" required>
               <Input type="date" value={completion.actual} onChange={(e) => setCompletion((c) => ({ ...c, actual: e.target.value }))} />
             </Field>

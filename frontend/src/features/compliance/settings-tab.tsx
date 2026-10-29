@@ -139,7 +139,7 @@ function SettingsForm({ s, isAdmin }: { s: ComplianceSettings; isAdmin: boolean 
 
           <section className="space-y-3">
             <h4 className="text-2xs font-semibold uppercase tracking-wider text-ink-3">Counsel review</h4>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Field label="Reviewed on">
                 <Input type="date" value={reviewedAt} onChange={(e) => setReviewedAt(e.target.value)} />
               </Field>

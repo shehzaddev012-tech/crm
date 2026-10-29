@@ -192,7 +192,7 @@ export function SignalSheet({
       >
         <form id="signal-form" onSubmit={submit} className="space-y-4">
           {editing && signal && (
-            <div className="grid grid-cols-2 gap-3 rounded-lg border border-line bg-subtle/60 p-3 text-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 rounded-lg border border-line bg-subtle/60 p-3 text-sm">
               <div>
                 <p className="text-xs text-ink-3">Linked to</p>
                 <p className="truncate text-ink">

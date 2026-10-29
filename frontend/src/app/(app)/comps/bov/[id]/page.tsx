@@ -160,7 +160,7 @@ export default function BovPrintPage({ params }: { params: { id: string } }) {
           </div>
         </header>
 
-        <section className="grid grid-cols-2 gap-6 border-b border-line py-5">
+        <section className="grid grid-cols-1 sm:grid-cols-2 gap-6 border-b border-line py-5">
           <div>
             <h2 className="mb-2 text-sm font-semibold">Subject property</h2>
             <p className="text-sm font-medium">{String(subject.name || subject.address_line || bov.property_label || "—")}</p>
